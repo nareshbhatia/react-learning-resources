@@ -7,30 +7,30 @@ perseverance :smile:
 
 If you are curious, this is my preferred React stack:
 
+**Core**
+
 - [TypeScript](https://www.typescriptlang.org/docs/) for type safety
+- [React](https://reactjs.org/) - for building component-based UIs
+- [React Context](https://reactjs.org/docs/context.html) &
+  [hooks](https://reactjs.org/docs/hooks-intro.html) for state management
 
-- [React](https://reactjs.org/) - core library for building component-based UIs
+**Foundational libraries**
 
-  - [React Context](https://reactjs.org/docs/context.html) &
-    [hooks](https://reactjs.org/docs/hooks-intro.html) for state management
+- [React Router](https://reactrouter.com/) for navigation
+- [React Query](https://react-query.tanstack.com/) for fetching data using REST
+- [Apollo GraphQL](https://www.apollographql.com/docs/) for fetching data using
+  GraphQL
+- [React Hook Form](https://react-hook-form.com/get-started) for form handling
+- [ag-Grid](https://www.ag-grid.com) - a feature-packed JavaScript grid
+- [Highcharts](https://www.highcharts.com) for interactive charts
 
-- Foundational libraries
+**Essential tools**
 
-  - [React Router](https://reactrouter.com/) for navigation
-  - [React Query](https://react-query.tanstack.com/) for fetching data using
-    REST
-  - [Apollo GraphQL](https://www.apollographql.com/docs/) for fetching data
-    using GraphQL
-  - [React Hook Form](https://react-hook-form.com/get-started) for form handling
-  - [ag-Grid](https://www.ag-grid.com) - a feature-packed JavaScript grid
-  - [Highcharts](https://www.highcharts.com) for interactive charts
-
-- Essential tools
-  - [Storybook](https://storybook.js.org/) to develop UI components in isolation
-  - [React Testing Library](https://testing-library.com/) for unit testing
-  - [Cypress](https://www.cypress.io/) for end-to-end testing
-  - [Mock Service Worker](https://mswjs.io/) to mock HTTP requests
-  - [Prettier](https://prettier.io/) to format code consistently
+- [Storybook](https://storybook.js.org/) to develop UI components in isolation
+- [React Testing Library](https://testing-library.com/) for unit testing
+- [Cypress](https://www.cypress.io/) for end-to-end testing
+- [Mock Service Worker](https://mswjs.io/) to mock HTTP requests
+- [Prettier](https://prettier.io/) to format code consistently
 
 I have created the
 [React Accelerate template](https://github.com/PublicisSapient/cra-template-accelerate)
@@ -59,9 +59,9 @@ to kick-start React apps using the above stack.
 ## The React Crash Course
 
 This crash course is designed to teach you React and related web technologies as
-fast as possible. Please feel free to skip any topic that you already know. For
-video tutorials, I highly recommend to type along with the instructor for
-maximum understanding.
+fast as possible. Feel free to skip any topic that you already know. For video
+tutorials, I highly recommend to type along with the instructor to have it sink
+in faster.
 
 - [HTML Crash Course For Absolute Beginners](https://www.youtube.com/watch?v=UB1O30fR-EE)
   (1:00) by Brad Traversy
