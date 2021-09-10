@@ -104,7 +104,7 @@ in faster.
 - [Recommended Folder Structure](./docs/folder-structure.md)
 - [React Coding Conventions](./docs/react-coding-conventions.md)
 - [React - The Complete Guide - Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
-- [React and Typescript](https://sapient.udemy.com/course/react-and-typescript-build-a-portfolio-project/)
+- [React and Typescript - Udemy](https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/)
 - [Dan Abramov's Blog](https://overreacted.io/)
 - [Kent Dodd's Blog](https://kentcdodds.com/)
 - [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
