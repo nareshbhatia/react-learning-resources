@@ -103,10 +103,12 @@ in faster.
 - [React documentation](https://reactjs.org/docs/getting-started.html)
 - [Recommended Folder Structure](./docs/folder-structure.md)
 - [React Coding Conventions](./docs/react-coding-conventions.md)
+- [Epic React by Kent C. Dodds](https://epicreact.dev/) - detailed hands-on
+  training in React
 - [React - The Complete Guide - Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 - [React and Typescript - Udemy](https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/)
 - [Dan Abramov's Blog](https://overreacted.io/)
-- [Kent Dodd's Blog](https://kentcdodds.com/)
+- [Kent C. Dodd's Blog](https://kentcdodds.com/)
 - [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
 
 ## React Router
