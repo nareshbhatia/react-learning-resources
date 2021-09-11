@@ -48,6 +48,7 @@ to kick-start React apps using the above stack.
 - [GraphQL](#graphql)
 - [Highcharts](#highcharts)
 - [ag-Grid](#ag-grid)
+- [Jest](#jest)
 - [React Testing Library](#react-testing-library)
 - [Storybook](#storybook)
 - [Mock Service Worker](#mock-service-worker)
@@ -75,6 +76,10 @@ in faster.
   by Brad Traversy
 - [React Crash Course](https://www.youtube.com/watch?v=w7ejDZ8SWv8) (1:49) by
   Brad Traversy
+- [Jest Crash Course](https://www.youtube.com/watch?v=7r4xVDI2vho) (0:57) by
+  Brad Traversy (does not cover mocking, see below for mocking)
+- [Jest Crash Course](https://www.youtube.com/watch?v=ajiAl5UNzBU) (start at
+  0:50 for mocking) by Laith Harb
 
 ## Developer Machine Setup
 
@@ -148,6 +153,10 @@ with some concepts (like `columnDefs`) from the JavaScript version.
 
 - [JavaScript Grid Documentation](https://www.ag-grid.com/javascript-grid/)
 - [React Grid Documentation](https://www.ag-grid.com/react-grid/)
+
+## Jest
+
+- [Documentation](https://jestjs.io/docs/getting-started)
 
 ## React Testing Library
 
