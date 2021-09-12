@@ -36,6 +36,9 @@ I have created the
 [React Accelerate template](https://github.com/PublicisSapient/cra-template-accelerate)
 to kick-start React apps using the above stack.
 
+P.S. If you find this content useful, please show your appreciation by starring
+this repository.
+
 ## Contents
 
 - [The React Crash Course](#the-react-crash-course)
