@@ -51,6 +51,7 @@ this repository.
 - [GraphQL](#graphql)
 - [Highcharts](#highcharts)
 - [ag-Grid](#ag-grid)
+- [Testing Best Practices](#testing-best-practices)
 - [Jest](#jest)
 - [React Testing Library](#react-testing-library)
 - [Storybook](#storybook)
@@ -116,7 +117,12 @@ in faster.
 - [React - The Complete Guide - Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 - [React and Typescript - Udemy](https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/)
 - [Dan Abramov's Blog](https://overreacted.io/)
+  - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
+  - [Writing Resilient Components](https://overreacted.io/writing-resilient-components/)
 - [Kent C. Dodd's Blog](https://kentcdodds.com/)
+  - [State Colocation - Where to Put State](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster)
+  - [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
+  - [useState lazy initialization and function updates](https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates)
 - [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
 
 ## React Router
@@ -156,6 +162,11 @@ with some concepts (like `columnDefs`) from the JavaScript version.
 
 - [JavaScript Grid Documentation](https://www.ag-grid.com/javascript-grid/)
 - [React Grid Documentation](https://www.ag-grid.com/react-grid/)
+
+## Testing Best Practices
+
+- [How to know what to test](https://kentcdodds.com/blog/how-to-know-what-to-test)
+- [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
 
 ## Jest
 
