@@ -120,8 +120,8 @@ in faster.
   - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
   - [Writing Resilient Components](https://overreacted.io/writing-resilient-components/)
 - [Kent C. Dodd's Blog](https://kentcdodds.com/)
-  - [State Colocation - Where to Put State](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster)
   - [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
+  - [State Colocation - Where to Put State](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster)
   - [useState lazy initialization and function updates](https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates)
 - [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
 
