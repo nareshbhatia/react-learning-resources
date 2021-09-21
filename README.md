@@ -85,6 +85,10 @@ in faster.
 - [Jest Crash Course](https://www.youtube.com/watch?v=ajiAl5UNzBU) (start at
   0:50 for mocking) by Laith Harb
 
+Once done, you can test your understanding by taking my practice exercise.
+Here's the link:
+[React Takeout Exercise](https://github.com/nareshbhatia/react-takeout-exercise).
+
 ## Developer Machine Setup
 
 - [Mac setup](./docs/mac-setup.md)
