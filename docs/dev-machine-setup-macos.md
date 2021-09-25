@@ -1,7 +1,4 @@
-# Development Machine Setup
-
-The instructions below are specific to MacOS. If you are on a Windows machine,
-some steps will be different.
+# Development Machine Setup for MacOS
 
 ### Install Homebrew & Required Packages
 
@@ -59,9 +56,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 Now install the latest LTS version of Node.js
 
 ```bash
-nvm install 12.18.2
+nvm install --lts
 source "$HOME/.zshrc"
-node -v    # should print v12.18.2
+node -v    # prints v14.17.6 as of this writing
 ```
 
 If you get the error `nvm: command not found`, then follow the instructions
@@ -76,7 +73,7 @@ source "$HOME/.zshrc"
 yarn -v    # should print a version number like v1.22.4
 ```
 
-Note: Do note use Homebrew to install Yarn because we did not use it to install
+Note: Do not use Homebrew to install Yarn because we did not use it to install
 node. See [this issue](https://github.com/yarnpkg/website/issues/913).
 
 ### Verify ~/.zshrc
@@ -102,10 +99,23 @@ build and run a React app. I recommend keeping all your projects under
 
 ```bash
 cd ~/projects
-git clone https://github.com/nareshbhatia/react-force-template.git
-cd react-force-template
+git clone https://github.com/PublicisSapient/accelerated-news.git
+cd accelerated-news
 yarn
 yarn start
 ```
 
 Congratulations! Your machine is now certified to build React apps!
+
+You may now install an IDE like
+[Visual Studio Code](https://code.visualstudio.com/) (free) or
+[WebStorm](https://www.jetbrains.com/webstorm/) (paid).
+
+Here are some useful, Visual Studio Code extensions:
+
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap)
+- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
