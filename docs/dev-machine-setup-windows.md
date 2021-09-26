@@ -6,6 +6,10 @@
 installer for Windows software. We will use it to install the tools and
 utilities we need for developing React applications.
 
+> Note: For any reason, if you don't prefer to use Chocolatey, that's ok. Just
+> make sure that you install the other recommended packages using your preferred
+> installation method.
+
 Follow the steps listed below to install Chocolatey (these are based on the
 [installation procedure](https://chocolatey.org/install) described on the
 Chocolatey site):
