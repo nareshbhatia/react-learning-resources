@@ -90,7 +90,7 @@ Once done, you can test your understanding by taking
 
 ## Developer Machine Setup
 
-- [Mac setup](./docs/dev-machine-setup-macos.md)
+- [MacOS setup](./docs/dev-machine-setup-macos.md)
 - [Windows setup](./docs/dev-machine-setup-windows.md)
 
 ## CSS

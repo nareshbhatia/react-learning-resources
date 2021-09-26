@@ -107,6 +107,8 @@ yarn start
 
 Congratulations! Your machine is now certified to build React apps!
 
+## Install an IDE
+
 You may now install an IDE like
 [Visual Studio Code](https://code.visualstudio.com/) (free) or
 [WebStorm](https://www.jetbrains.com/webstorm/) (paid).

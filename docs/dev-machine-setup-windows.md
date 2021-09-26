@@ -14,8 +14,11 @@ Chocolatey site):
   right-click **Windows PowerShell**, and then click **Run as administrator**.)
 
 - Ensure that the execution policy is not restricted. Run `Get-ExecutionPolicy`.
-  If it returns `Restricted`, then run
-  `Set-ExecutionPolicy Bypass -Scope Process`.
+  If it returns `Restricted`, then run the following command:
+
+```bash
+Set-ExecutionPolicy Bypass -Scope Process
+```
 
 - Now run the following command. (Get this command from
   [Chocolatey’s official installation page](https://chocolatey.org/install#individual)
@@ -70,6 +73,8 @@ yarn start
 ```
 
 Congratulations! Your machine is now certified to build React apps!
+
+## Install an IDE
 
 You may now install an IDE like
 [Visual Studio Code](https://code.visualstudio.com/) (free) or
