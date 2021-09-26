@@ -93,9 +93,10 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ### Try building a React app
 
-Clone the following repo wherever you keep projects and verify that you can
-build and run a React app. I recommend keeping all your projects under
-~/projects.
+Clone the
+[Accelerated News](https://github.com/PublicisSapient/accelerated-news) repo
+wherever you keep projects and verify that you can build and run the app. I
+recommend keeping all your projects under ~/projects.
 
 ```bash
 cd ~/projects

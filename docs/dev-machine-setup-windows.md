@@ -40,6 +40,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
   [Commands](https://docs.chocolatey.org/en-us/choco/commands/) for a listing of
   CLI commands.
 
+Tip: Always run Chocolatey from PowerShell running as an administrator.
+
 ### Install 7-Zip
 
 [7-Zip](https://www.7-zip.org/) is a good open source file archiver.
@@ -54,18 +56,60 @@ choco install 7zip -y
 the git-for-windows version which includes all Unix commands ready in PATH so
 that you can use commands like `git`, `cat` and `ls` instantly on your machine.
 
+```bash
+choco install cmdr -y
+```
+
+Cmder is installed under C:\tools\cmder. Open this folder in File Explorer. You
+will find the Cmder executable here called Cmder.exe. Pin this executable to the
+taskbar for ease. Now start Cmder from the taskbar.
+
+By default, Cmder starts at C:\tools\cmder. I prefer having it start at my home
+directory (e.g. D:\users\<username>). Follow the steps below to do this.
+
+- Click on the hamburger menu (bottom right) and select Settings.
+- In the navigation bar, select Startup > Tasks.
+- Under Predefined Tasks, click on {cmd::Cmder}.
+- Click the button that says "Startup dir..."
+- Select your home directory.
+- Click on "Save Settings".
+
 ### Install Node
+
+```bash
+choco install nodejs-lts -y
+```
+
+Open Cmder and verify that node is installed correctly:
+
+```bash
+node -v    # prints v14.17.6 as of this writing
+```
 
 ### Install Yarn
 
-### Try building a React app
+```bash
+choco install yarn -y
+```
 
-Clone the following repo wherever you keep projects and verify that you can
-build and run a React app. I recommend keeping all your projects under your home
-directory at `\user\<username>\projects`. (%HOMEDRIVE% %HOMEPATH%)
+Open Cmder and verify that yarn is installed correctly:
 
 ```bash
-cd ~/projects
+yarn -v    # prints v1.22.5 as of this writing
+```
+
+### Try building a React app
+
+Clone the
+[Accelerated News](https://github.com/PublicisSapient/accelerated-news) repo
+wherever you keep projects and verify that you can build and run the app. I
+recommend keeping all your projects under your home directory, e.g.
+`D:\user\<username>\projects`.
+
+Open Cmder and execute the following commands:
+
+```bash
+cd projects
 git clone https://github.com/PublicisSapient/accelerated-news.git
 cd accelerated-news
 yarn
