@@ -1,5 +1,11 @@
 # Development Machine Setup for MacOS
 
+### Install iTerm2
+
+iTerm2 is a replacement for the MacOS Terminal application and comes with an
+impressive set of features. Download and install iTerm2 from
+[here](https://iterm2.com/).
+
 ### Install Homebrew & Required Packages
 
 ```bash
