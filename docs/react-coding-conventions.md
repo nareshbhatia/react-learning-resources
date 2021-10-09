@@ -32,20 +32,30 @@ const AccountDetails = () => {
 };
 ```
 
-## Float all Hooks to the top of your function component
+## Structuring function components
 
-As discussed in [React docs](https://reactjs.org/docs/hooks-rules.html), don't
-call Hooks inside loops, conditions, or nested functions. Instead, always use
-Hooks at the top level of your React function, before any early returns. In
+Sequence the code in function components as follows:
+
+1. Float all your hooks to the top.
+2. Next write your handlers and other functions.
+3. Then write any executable logic.
+4. Finally, return your markup.
+
+Reason for the first bullet above can be found in React docs
+[here](https://reactjs.org/docs/hooks-rules.html). According to these docs,
+don't call Hooks inside loops, conditions, or nested functions. Instead, always
+use Hooks at the top level of your React function, before any early returns. In
 other words, float all Hooks to the top of your component. This will avoid
 breaking the rule of Hooks.
 
 **Example**
 
-The example below shows 4 hooks floated to the top of the component.
+The example below shows the structuring rules listed above. Note that 4 hooks
+are floated to the top of the component.
 
 ```tsx
 const SignUpPage = () => {
+  // ---------- hooks ----------
   const { authState, setAuthState } = useAuthContext();
   const navigate = useNavigate();
   const [signUp, { error }] = useMutation(SignUpDocument);
@@ -57,8 +67,13 @@ const SignUpPage = () => {
     }
   }, [authState.user, navigate]);
 
+  // ---------- handlers and other functions ----------
   const handleSubmit = async (formEntity: FormEntity) => {};
 
+  // ---------- any executable code ----------
+  // e.g. if (loading) { ... }
+
+  // ---------- return markup ----------
   return <SignUpForm signUpError={error?.message} onSubmit={handleSubmit} />;
 };
 ```
