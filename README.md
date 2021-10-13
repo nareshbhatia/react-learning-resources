@@ -169,8 +169,12 @@ with some concepts (like `columnDefs`) from the JavaScript version.
 
 ## Testing Best Practices
 
+- [React Testing Techniques](https://github.com/nareshbhatia/react-testing-techniques)
 - [How to know what to test](https://kentcdodds.com/blog/how-to-know-what-to-test)
 - [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
+- [Write fewer, longer tests](https://kentcdodds.com/blog/write-fewer-longer-tests)
+- [Making your UI tests resilient to change](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change)
+- [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
 
 ## Jest
 
