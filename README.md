@@ -124,9 +124,20 @@ Once done, you can test your understanding by taking
   - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
   - [Writing Resilient Components](https://overreacted.io/writing-resilient-components/)
 - [Kent C. Dodd's Blog](https://kentcdodds.com/)
-  - [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
-  - [State Colocation - Where to Put State](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster)
-  - [useState lazy initialization and function updates](https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates)
+  - [State Colocation - Where to Put State](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster) -
+    explains when to lift state up (so that multiple components can access it)
+    vs. push it down, i.e. colocate it (because only one component needs it)
+  - [Application State Management with React](https://kentcdodds.com/blog/application-state-management-with-react) -
+    makes a case for using React Context and Hooks to manage state vs. external
+    libraries like Redux
+  - [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively) -
+    describes a nice pattern for using React Context
+  - [Should I useState or useReducer?](https://kentcdodds.com/blog/should-i-usestate-or-usereducer) -
+    both can be used for most state management scenarios, however depending on
+    the scenario, one may be cleaner than the other
+  - [useState lazy initialization and function updates](https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates) -
+    talks about a subtle bug that can occur when using `useState` and how to fix
+    it by doing a _function update_
 - [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
 
 ## React Router
