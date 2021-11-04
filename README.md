@@ -142,8 +142,7 @@ Once done, you can test your understanding by taking
 
 ## React Router
 
-- [Version 6 docs](https://github.com/remix-run/react-router/tree/dev/docs) -
-  Note that v6 is in beta. The only up-to-date docs are here in the dev branch.
+- [React Router docs](https://reactrouter.com/docs/en/v6)
 
 ## React Hook Form
 
