@@ -11,6 +11,7 @@ impressive set of features. Download and install iTerm2 from
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install git wget
+brew install tree # optional package for directory listing
 ```
 
 ### Install Z Shell
@@ -95,6 +96,24 @@ export NVM_DIR="$HOME/.nvm"
 
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+```
+
+**Optional**
+Add the following command shortcuts at the end of .zshrc
+
+```bash
+# ----- Command Shortcuts -----
+# preferred 'ls' implementation
+alias ll='ls -FGlAhp'
+
+# recursive directory listing
+alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+
+# better directory listing
+alias ltree='tree --dirsfirst -F -a'
+
+# preferred 'ps' implementation
+alias pc='ps -e -o user,pid,comm'
 ```
 
 ### Try building a React app
