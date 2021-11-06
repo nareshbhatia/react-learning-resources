@@ -98,7 +98,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ```
 
-**Optional**
+#### Optional
+
 Add the following command shortcuts at the end of .zshrc
 
 ```bash
