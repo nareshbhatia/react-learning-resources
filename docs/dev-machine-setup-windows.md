@@ -78,28 +78,27 @@ directory (e.g. D:\users\<username>). Follow the steps below to do this.
 - Select your home directory.
 - Click on "Save Settings".
 
-### Install Node
+### Install NVM for Windows & Node
+
+NVM for Windows is a utility to manage multiple node.js versions. It is better
+than using the Node.js installer or Chocolatey because you can keep multiple
+versions of Node on your machine, which is very useful sometimes.
+
+Go to the [NVM for Windows](https://github.com/coreybutler/nvm-windows) repo and
+follow the instructions there to install it. Also install the LTS version of
+Node (v16.14.0 at the time of this writing).
+
+_In case you don't want to install NVM for Windows, here is the command to
+install Node using Chocolatey:_
 
 ```bash
 choco install nodejs-lts -y
-```
-
-Open Cmder and verify that node is installed correctly:
-
-```bash
-node -v    # prints v14.17.6 as of this writing
 ```
 
 ### Install Yarn
 
 ```bash
 choco install yarn -y
-```
-
-Open Cmder and verify that yarn is installed correctly:
-
-```bash
-yarn -v    # prints v1.22.5 as of this writing
 ```
 
 ### Try building a React app
