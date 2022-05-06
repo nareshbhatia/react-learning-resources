@@ -115,7 +115,7 @@ Once done, you can test your understanding by taking
 
 - [React documentation](https://reactjs.org/docs/getting-started.html)
 - [Recommended Folder Structure](./docs/folder-structure.md)
-- [Coding Conventions](./docs/coding-conventions.md)
+- [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
 - [Epic React by Kent C. Dodds](https://epicreact.dev/) - detailed hands-on
   training in React
 - [React - The Complete Guide - Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
