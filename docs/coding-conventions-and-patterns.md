@@ -4,7 +4,7 @@ There is plenty of content out there on coding conventions and best practices. I
 am going to highlight a few items that I have found useful when working by
 myself or with large teams.
 
-## TypeScript Conventions
+## TypeScript Best Practices
 
 - Don't use `any` - it defeats the purpose of using TypeScript. In case you are
   using a 3rd party library that doesn't provide typedefs, it may be ok to use
@@ -80,6 +80,11 @@ export function Header({ children }: HeaderProps) {
 
 Note: Stop using `React.FC` and `React.FunctionComponent`. React 18 removed the
 implicit children property in these types. Use the above construct instead.
+
+- It is customary to NOT specify the return type of a component and simply rely
+  on type inference. Technically it could be `React.ReactElement` or even wider
+  such as `JSX.Element`, but better to let TypeScript infer it than mistakenly
+  typing it too wide.
 
 **References**
 
