@@ -81,10 +81,12 @@ export function Header({ children }: HeaderProps) {
 Note: Stop using `React.FC` and `React.FunctionComponent`. React 18 removed the
 implicit children property in these types. Use the above construct instead.
 
-- It is customary to NOT specify the return type of a component and simply rely
-  on type inference. Technically it could be `React.ReactElement` or even wider
-  such as `JSX.Element`, but better to let TypeScript infer it than mistakenly
-  typing it too wide.
+**Should I define a return type?**
+
+It is customary to NOT specify the return type from a component and simply rely
+on type inference. Technically it could be `React.ReactElement` or even wider
+such as `JSX.Element`, but better to let TypeScript infer it than mistakenly
+typing it too wide.
 
 **References**
 
