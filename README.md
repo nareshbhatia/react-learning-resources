@@ -84,6 +84,9 @@ in faster.
   Brad Traversy (does not cover mocking, see below for mocking)
 - [Jest Crash Course](https://www.youtube.com/watch?v=ajiAl5UNzBU) (start at
   0:50 for mocking) by Laith Harb
+- [Recommended Folder Structure](./docs/folder-structure.md) by Naresh Bhatia
+- [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
+  by Naresh Bhatia
 
 Once done, you can test your understanding by taking
 [this practice exercise](https://github.com/nareshbhatia/react-takeout-exercise).
