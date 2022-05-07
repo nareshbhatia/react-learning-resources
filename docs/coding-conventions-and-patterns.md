@@ -109,7 +109,7 @@ component which expects to receive a handler. Note that the prop is named
 `onAccountSelected` and the handler is named `handleAccountSelected`.
 
 ```tsx
-// ----- AccountSelector -----
+// ----- AccountSelector.tsx -----
 interface AccountSelectorProps {
   onAccountSelected: (accountId: string) => void;
 }
@@ -118,7 +118,7 @@ function AccountSelector({ onAccountSelected }: AccountSelectorProps) {
   ...
 }
 
-// ----- AccountDetails -----
+// ----- AccountDetails.tsx -----
 function AccountDetails() {
   const handleAccountSelected = (accountId: string) => {
     // hanle account selection
@@ -255,3 +255,181 @@ function useViewStateContext() {
 
 export { ViewStateContextProvider, useViewStateContext };
 ```
+
+## React Custom Hooks
+
+React 16.8 introduced the concept of _Hooks_. They let you use state and other
+React features without writing a class. You can read more about hooks in the
+[React Docs](https://reactjs.org/docs/hooks-intro.html).
+
+Building your own Hooks lets you extract component logic into reusable
+functions.
+
+**Example using a React Hook without any custom hook**
+
+The component shown below uses `useEffect` to fetch top 10 movies and display
+them in a list.
+
+```tsx
+// ----- MovieListContainer.tsx -----
+export function MovieListContainer() {
+  const apiUrl = 'http://localhost:8080/top-10-movies';
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState<unknown>();
+  const [movies, setMovies] = useState<Array<Movie>>([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch(apiUrl);
+
+        if (response.ok) {
+          setData(await response.json());
+          setIsLoading(false);
+        } else {
+          setIsError(true);
+          setError(`Error: ${response.status}`);
+          setIsLoading(false);
+        }
+      } catch (error) {
+        setIsError(true);
+        setError(error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, [apiUrl]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <h2 className="h5">{(error as any).message}</h2>;
+  }
+
+  return (
+    <Fragment>
+      <h2 className="h5 line-height-none mb-2">Top 10 Movies Of All Time</h2>
+      <MovieList movies={movies} />
+    </Fragment>
+  );
+}
+```
+
+Note that most of the logic in the component is related to fetching data from
+the server and managing its state (`isLoading`, `isError`, `error` etc.). This
+is a lot of noise in the component that has nothing to do with the
+presentational logic, i.e. displaying of the list. What if there was another
+component that also wanted to make an api call to display some other data. We
+would have to duplicate the same fetching logic there too. This is a very good
+use case for extracting the component logic into a custom hook, thus reducing
+the noise in the component and also reusing that logic in other places.
+
+**Example using a custom React Hook**
+
+Here's the revised code. Now that the fetching logic has been extracted into a
+custom hook, the component itself is very simple and readable. Also, the
+fetching logic in `useFetch` is reusable by other components that need to fetch
+data.
+
+```tsx
+// ----- MovieListContainer.tsx -----
+export function MovieListContainer() {
+  const apiUrl = 'http://localhost:8080/top-10-movies';
+  const {
+    isLoading,
+    isError,
+    error,
+    data: movies,
+  } = useFetch<Array<Movie>>(apiUrl);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <h2 className="h5">{(error as any).message}</h2>;
+  }
+
+  if (!movies) {
+    return <h2 className="h5">No movies found</h2>;
+  }
+
+  return (
+    <Fragment>
+      <h2 className="h5 line-height-none mb-2">Top 10 Movies Of All Time</h2>
+      <MovieList movies={movies} />
+    </Fragment>
+  );
+}
+```
+
+```tsx
+// ----- useFetch.ts -----
+export function useFetch<TData>(apiUrl: string) {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState<unknown>();
+  const [data, setData] = useState<TData>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch(apiUrl);
+
+        if (response.ok) {
+          setData(await response.json());
+          setIsLoading(false);
+        } else {
+          setIsError(true);
+          setError(`Error: ${response.status}`);
+          setIsLoading(false);
+        }
+      } catch (error) {
+        setIsError(true);
+        setError(error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [apiUrl]);
+  return { isLoading, isError, error, data };
+}
+```
+
+**Custom Hook Guidelines**
+
+- Try to resist adding abstraction too early. Don’t feel like you have to
+  immediately split a component into Hooks. Start spotting cases where a custom
+  Hook could hide complex logic behind a simple interface, or help untangle a
+  messy component.
+- React hooks are just a way to
+  - make a part of your component code reusable
+  - move a part of your component code into its own "area"
+- If your custom hook is not based on other hooks, then strictly speaking you
+  don't have a hook, just a vanilla JavaScript function. For example, this is
+  not a hook:
+
+```ts
+const useLegalAge = (userAge, locale) => {
+  if (locale === 'US') {
+    return { isLegalAge: userAge >= 21 };
+  } else {
+    return { isLegalAge: userAge >= 18 };
+  }
+};
+```
+
+**References**
+
+- [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html) - React
+  Docs
+- [What kind of logic React Hooks are there to handle?](https://stackoverflow.com/questions/66115785/what-kind-of-logic-react-hooks-are-there-to-handle) -
+  Read the answer to this StackOverflow question
