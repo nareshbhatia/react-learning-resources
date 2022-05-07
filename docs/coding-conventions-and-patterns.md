@@ -37,8 +37,8 @@ and easier to scan.
   - Always use this form of import: `import * as React from 'react'`. This is
     called an _ESModules namespace import_.
   - Don't import any named exports like this:
-    `import {Fragment, useState} from 'react`. Instead, use `React.Fragment` or
-    `React.useState` directly in your code where needed. See
+    `import {Fragment, useState} from 'react'`. Instead, use `React.Fragment` or
+    `React.useState` directly in your code as needed. See
     [here](https://epicreact.dev/importing-react-through-the-ages/) for a
     detailed explanation.
 - Follow by other external imports, sorted by module name. For example, an
