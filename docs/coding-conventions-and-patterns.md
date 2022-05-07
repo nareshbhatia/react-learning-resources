@@ -31,13 +31,14 @@ The import order guidelines below are intended to keep your imports organized
 and easier to scan.
 
 - Start by importing 'react', but only if you need to use something exported
-  from react, e.g. `React.Fragment` or `React.useState`. Otherwise, starting
-  from React 17, you do not need to import react just to transform JSX (thanks
-  to the new JSX transform).
+  from it, e.g. `React.Fragment` or `React.useState`. Otherwise, starting from
+  React 17, you do not need to import react just to transform JSX (thanks to the
+  new JSX transform).
   - Always use this form of import: `import * as React from 'react'`. This is
-    called an "ESModules namespace import". Don't try to do any named imports
-    like this: `{Fragment, useState}`. Instead, use `React.Fragment` or
-    `React.useState` directly in code as needed. See
+    called an _ESModules namespace import_.
+  - Don't import any named exports like this:
+    `import {Fragment, useState} from 'react`. Instead, use `React.Fragment` or
+    `React.useState` directly in your code where needed. See
     [here](https://epicreact.dev/importing-react-through-the-ages/) for a
     detailed explanation.
 - Follow by other external imports, sorted by module name. For example, an
