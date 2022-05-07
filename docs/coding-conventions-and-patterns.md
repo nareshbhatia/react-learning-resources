@@ -2,7 +2,16 @@
 
 There is plenty of content out there on coding conventions and best practices. I
 am going to highlight a few items that I have found useful when working by
-myself or with large teams.
+myself or with large teams:
+
+- [TypeScript Best Practices](#typescript-best-practices)
+- [Import order](#import-order)
+- [React Components](#react-components)
+- [Event props and event handlers](#event-props-and-event-handlers)
+- [Structuring content inside function components](#structuring-content-inside-function-components)
+- [State Management](#state-management)
+- [React Context Pattern](#react-context-pattern)
+- [Custom Hooks](#custom-hooks)
 
 ## TypeScript Best Practices
 
@@ -256,16 +265,16 @@ function useViewStateContext() {
 export { ViewStateContextProvider, useViewStateContext };
 ```
 
-## React Custom Hooks
+## Custom Hooks
 
 React 16.8 introduced the concept of _Hooks_. They let you use state and other
 React features without writing a class. You can read more about hooks in the
 [React Docs](https://reactjs.org/docs/hooks-intro.html).
 
-Building your own Hooks lets you extract component logic into reusable
+Building your own hooks lets you extract component logic into reusable
 functions.
 
-**Example using a React Hook without any custom hook**
+**Example of using a built-in React Hook, without any custom hook**
 
 The component shown below uses `useEffect` to fetch top 10 movies and display
 them in a list.
@@ -324,16 +333,16 @@ export function MovieListContainer() {
 Note that most of the logic in the component is related to fetching data from
 the server and managing its state (`isLoading`, `isError`, `error` etc.). This
 is a lot of noise in the component that has nothing to do with the
-presentational logic, i.e. displaying of the list. What if there was another
+presentational logic (i.e. displaying of the list). What if there was another
 component that also wanted to make an api call to display some other data. We
 would have to duplicate the same fetching logic there too. This is a very good
 use case for extracting the component logic into a custom hook, thus reducing
 the noise in the component and also reusing that logic in other places.
 
-**Example using a custom React Hook**
+**Example of using a custom React Hook**
 
-Here's the revised code. Now that the fetching logic has been extracted into a
-custom hook, the component itself is very simple and readable. Also, the
+Here's the revised code, with the fetching logic extracted into a separate
+custom hook. The component itself is now very simple and readable. Also, the
 fetching logic in `useFetch` is reusable by other components that need to fetch
 data.
 
