@@ -30,7 +30,16 @@ myself or with large teams:
 The import order guidelines below are intended to keep your imports organized
 and easier to scan.
 
-- Start with an import from 'react', if needed.
+- Start by importing 'react', but only if you need to use something exported
+  from react, e.g. `React.Fragment` or `React.useState`. Otherwise, starting
+  from React 17, you do not need to import react just to transform JSX (thanks
+  to the new JSX transform).
+  - Always use this form of import: `import * as React from 'react'`. This is
+    called an "ESModules namespace import". Don't try to do any named imports
+    like this: `{Fragment, useState}`. Instead, use `React.Fragment` or
+    `React.useState` directly in code as needed. See
+    [here](https://epicreact.dev/importing-react-through-the-ages/) for a
+    detailed explanation.
 - Follow by other external imports, sorted by module name. For example, an
   import from `@apollo/client` goes before the import from `react-router-dom`.
 - Follow by internal imports, starting with parent directories and ending with
@@ -42,7 +51,7 @@ and easier to scan.
 **Example**
 
 ```tsx
-import React, { useEffect } from 'react';
+import * as React from 'react';
 import { useQuery } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import { Loading, SideBar } from '../../components';
@@ -165,7 +174,7 @@ function SignUpPage() {
   const [signUp, { error }] = useMutation(SignUpDocument);
 
   // redirect if user is already logged in
-  useEffect(() => {
+  React.useEffect(() => {
     if (authState.user) {
       navigate('/accounts');
     }
@@ -221,7 +230,7 @@ in a single file. This pattern is suggested by Kent C. Dodds in his blog
 **Example**
 
 ```tsx
-import React, { useContext, useState } from 'react';
+import * as React from 'react';
 
 // ---------- ViewStateContext ----------
 type ViewState = { isEditing: boolean };
@@ -239,7 +248,7 @@ interface ViewStateContextProviderProps {
 
 function ViewStateContextProvider({ children }: ViewStateContextProviderProps) {
   console.log('ViewStateContextProvider.render');
-  const [viewState, setViewState] = useState<ViewState>({
+  const [viewState, setViewState] = React.useState<ViewState>({
     isEditing: false,
   });
 
@@ -253,7 +262,7 @@ function ViewStateContextProvider({ children }: ViewStateContextProviderProps) {
 
 // ---------- useViewStateContext ----------
 function useViewStateContext() {
-  const viewStateContext = useContext(ViewStateContext);
+  const viewStateContext = React.useContext(ViewStateContext);
   if (viewStateContext === undefined) {
     throw new Error(
       'useViewStateContext must be used within a ViewStateContextProvider'
@@ -284,12 +293,12 @@ them in a list.
 export function MovieListContainer() {
   const apiUrl = 'http://localhost:8080/top-10-movies';
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [error, setError] = useState<unknown>();
-  const [movies, setMovies] = useState<Array<Movie>>([]);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
+  const [error, setError] = React.useState<unknown>();
+  const [movies, setMovies] = React.useState<Array<Movie>>([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchMovies = async () => {
       try {
         setIsLoading(true);
@@ -381,12 +390,12 @@ export function MovieListContainer() {
 ```tsx
 // ----- useFetch.ts -----
 export function useFetch<TData>(apiUrl: string) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [error, setError] = useState<unknown>();
-  const [data, setData] = useState<TData>();
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
+  const [error, setError] = React.useState<unknown>();
+  const [data, setData] = React.useState<TData>();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
