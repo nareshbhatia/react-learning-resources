@@ -84,9 +84,9 @@ in faster.
   Brad Traversy (does not cover mocking, see below for mocking)
 - [Jest Crash Course](https://www.youtube.com/watch?v=ajiAl5UNzBU) (start at
   0:50 for mocking) by Laith Harb
-- [Recommended Folder Structure](./docs/folder-structure.md) by Naresh Bhatia
 - [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
   by Naresh Bhatia
+- [Recommended Folder Structure](./docs/folder-structure.md) by Naresh Bhatia
 
 Once done, you can test your understanding by taking
 [this practice exercise](https://github.com/nareshbhatia/react-takeout-exercise).
@@ -117,8 +117,8 @@ Once done, you can test your understanding by taking
 ## React
 
 - [React documentation](https://reactjs.org/docs/getting-started.html)
-- [Recommended Folder Structure](./docs/folder-structure.md)
 - [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
+- [Recommended Folder Structure](./docs/folder-structure.md)
 - [Epic React by Kent C. Dodds](https://epicreact.dev/) - detailed hands-on
   training in React
 - [React - The Complete Guide - Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
