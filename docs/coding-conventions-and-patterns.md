@@ -233,11 +233,16 @@ in a single file. This pattern is suggested by Kent C. Dodds in his blog
 ```tsx
 import * as React from 'react';
 
+// ---------- ViewState ----------
+interface ViewState {
+  isEditing: boolean;
+}
+
 // ---------- ViewStateContext ----------
-type ViewState = { isEditing: boolean };
+// contains ViewState and ViewStateSetter
+
 type ViewStateSetter = (viewState: ViewState) => void;
 
-/** ViewStateContext contains ViewState and ViewStateSetter */
 const ViewStateContext = React.createContext<
   { viewState: ViewState; setViewState: ViewStateSetter } | undefined
 >(undefined);
@@ -248,7 +253,6 @@ interface ViewStateContextProviderProps {
 }
 
 function ViewStateContextProvider({ children }: ViewStateContextProviderProps) {
-  console.log('ViewStateContextProvider.render');
   const [viewState, setViewState] = React.useState<ViewState>({
     isEditing: false,
   });
