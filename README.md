@@ -87,6 +87,8 @@ in faster.
 - [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
   by Naresh Bhatia
 - [Recommended Folder Structure](./docs/folder-structure.md) by Naresh Bhatia
+- [Code Shaper - React best practices using code Generation](https://www.code-shaper.org/docs/getting-started/intro)
+  by Naresh Bhatia
 
 Once done, you can test your understanding by taking
 [this practice exercise](https://github.com/nareshbhatia/react-takeout-exercise).
@@ -119,6 +121,8 @@ Once done, you can test your understanding by taking
 - [React documentation](https://reactjs.org/docs/getting-started.html)
 - [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
 - [Recommended Folder Structure](./docs/folder-structure.md)
+- [Code Shaper - React best practices using code Generation](https://www.code-shaper.org/docs/getting-started/intro)
+  by Naresh Bhatia
 - [Epic React by Kent C. Dodds](https://epicreact.dev/) - detailed hands-on
   training in React
 - [React - The Complete Guide - Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
@@ -199,6 +203,7 @@ with some concepts (like `columnDefs`) from the JavaScript version.
 - [Guiding Principles](https://testing-library.com/docs/guiding-principles)
 - [Example](https://testing-library.com/docs/react-testing-library/example-intro)
 - [Cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet)
+- [Query Priority Guidelines](https://testing-library.com/docs/queries/about/#priority)
 - [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
 
 ## Storybook
