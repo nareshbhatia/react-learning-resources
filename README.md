@@ -87,7 +87,7 @@ in faster.
 - [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
   by Naresh Bhatia
 - [Recommended Folder Structure](./docs/folder-structure.md) by Naresh Bhatia
-- [Code Shaper - React best practices using code Generation](https://www.code-shaper.org/docs/getting-started/intro)
+- [Code Shaper - React best practices using code generation](https://www.code-shaper.org/docs/getting-started/intro)
   by Naresh Bhatia
 
 Once done, you can test your understanding by taking
@@ -121,7 +121,7 @@ Once done, you can test your understanding by taking
 - [React documentation](https://reactjs.org/docs/getting-started.html)
 - [Coding Conventions and Patterns](./docs/coding-conventions-and-patterns.md)
 - [Recommended Folder Structure](./docs/folder-structure.md)
-- [Code Shaper - React best practices using code Generation](https://www.code-shaper.org/docs/getting-started/intro)
+- [Code Shaper - React best practices using code generation](https://www.code-shaper.org/docs/getting-started/intro)
   by Naresh Bhatia
 - [Epic React by Kent C. Dodds](https://epicreact.dev/) - detailed hands-on
   training in React
