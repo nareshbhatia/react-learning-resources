@@ -8,8 +8,10 @@ impressive set of features. Download and install iTerm2 from
 
 ### Install Homebrew & Required Packages
 
+See latest install docs [here](https://brew.sh/).
+
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install git wget
 brew install tree # optional package for directory listing
 ```
@@ -38,9 +40,10 @@ is the default.
 
 ### Install Oh My Zsh
 
-Oh My Zsh is a delightful framework for managing your Zsh configuration. It
-comes bundled with thousands of helpful functions, helpers, plugins and themes.
-Enter the following command in your shell to install Oh My Zsh:
+[Oh My Zsh](https://ohmyz.sh/) is a delightful framework for managing your Zsh
+configuration. It comes bundled with thousands of helpful functions, helpers,
+plugins and themes. Enter the following command in your shell to install Oh My
+Zsh:
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -52,12 +55,15 @@ it with its own version. If you had any important configuration in your original
 
 ### Install Node Version Manager & Node
 
-Node Version Manager (nvm) is a bash script to manage multiple node.js versions.
-It is better than using the Node.js installer or Homebrew (see
+[Node Version Manager](https://github.com/nvm-sh/nvm) (nvm) is a bash script to
+manage multiple node.js versions. It is better than using the Node.js installer
+or Homebrew (see
 [this article](https://pawelgrzybek.com/install-nodejs-installer-vs-homebrew-vs-nvm/)).
 
+> Note: Go the the NVM site for the latest version of the install command.
+
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 
 Now install the latest LTS version of Node.js
@@ -65,23 +71,19 @@ Now install the latest LTS version of Node.js
 ```bash
 nvm install --lts
 source "$HOME/.zshrc"
-node -v    # prints v14.17.6 as of this writing
+node -v    # prints v16.17.1 as of this writing
 ```
 
 If you get the error `nvm: command not found`, then follow the instructions
 under
 [Troubleshooting on macOS](https://github.com/nvm-sh/nvm#troubleshooting-on-macos).
 
-Now install Yarn.
+Now install [Yarn](https://classic.yarnpkg.com/en/).
 
 ```bash
-curl -o- -L https://yarnpkg.com/install.sh | bash
-source "$HOME/.zshrc"
-yarn -v    # should print a version number like v1.22.4
+npm install --global yarn
+yarn -v    # should print a version number like v1.22.19
 ```
-
-Note: Do not use Homebrew to install Yarn because we did not use it to install
-node. See [this issue](https://github.com/yarnpkg/website/issues/913).
 
 ### Verify ~/.zshrc
 
