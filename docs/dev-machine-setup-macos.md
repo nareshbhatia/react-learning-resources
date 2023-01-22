@@ -60,7 +60,7 @@ manage multiple node.js versions. It is better than using the Node.js installer
 or Homebrew (see
 [this article](https://pawelgrzybek.com/install-nodejs-installer-vs-homebrew-vs-nvm/)).
 
-> Note: Go the the NVM site for the latest version of the install command.
+> Note: Go to the NVM site for the latest version of the install command.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
