@@ -222,6 +222,8 @@ with some concepts (like `columnDefs`) from the JavaScript version.
 
 - [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/) -
   Must read! Shows how to raise good PRs.
+- [Creating Effective Pull Requests](./docs/creating-effective-pull-requests.md) -
+  A short summary of the above article.
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - [Trunk Based Development](https://trunkbaseddevelopment.com/)
 - [Trunk-based Development vs. Git Flow](https://www.toptal.com/software/trunk-based-development-git-flow)
