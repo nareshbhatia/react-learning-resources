@@ -6,6 +6,14 @@ iTerm2 is a replacement for the MacOS Terminal application and comes with an
 impressive set of features. Download and install iTerm2 from
 [here](https://iterm2.com/).
 
+#### Optional: Set dark theme
+
+1. Select iTerm2 > Settings > Profile > Colors
+2. In the Color Presets dropdown, select "Dark Background"
+
+iTerm2 has many more presets available online. Select "Visit Online Gallery"
+from the Color Presets dropdown to try them out.
+
 ### Install Homebrew & Required Packages
 
 See latest install docs [here](https://brew.sh/).
@@ -71,18 +79,22 @@ Now install the latest LTS version of Node.js
 ```bash
 nvm install --lts
 source "$HOME/.zshrc"
-node -v    # prints v16.17.1 as of this writing
+node -v    # prints v20.16.0 as of this writing
 ```
 
 If you get the error `nvm: command not found`, then follow the instructions
 under
 [Troubleshooting on macOS](https://github.com/nvm-sh/nvm#troubleshooting-on-macos).
 
-Now install [Yarn](https://classic.yarnpkg.com/en/).
+### Optional: Install Yarn
+
+While Node comes with `npm` as its default package manager, if your projects use
+[Yarn](https://classic.yarnpkg.com/en/) instead, you can install Yarn using the
+commands below:
 
 ```bash
-npm install --global yarn
-yarn -v    # should print a version number like v1.22.19
+brew install yarn
+yarn -v    # should print a version number like v1.22.22
 ```
 
 ### Verify ~/.zshrc
@@ -97,7 +109,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-#### Optional
+#### Optional: Add command shortcuts
 
 Add the following command shortcuts at the end of .zshrc
 
@@ -114,24 +126,34 @@ alias ltree='tree --dirsfirst -F -a'
 
 # preferred 'ps' implementation
 alias pc='ps -e -o user,pid,comm'
+
+# ----- Functions -----
+# Find directories that contain the first argument in their name
+# Examples:
+#   fd node_modules
+#   fd movie
+fd() {
+  find . -name "*$1*" -type d -print
+}
 ```
 
 ### Try building a React app
 
-Clone the
-[Accelerated News](https://github.com/PublicisSapient/accelerated-news) repo
+Clone the [React Starter](https://github.com/nareshbhatia/react-starter) repo
 wherever you keep projects and verify that you can build and run the app. I
 recommend keeping all your projects under ~/projects.
 
 ```bash
 cd ~/projects
-git clone https://github.com/PublicisSapient/accelerated-news.git
-cd accelerated-news
-yarn
-yarn start
+git clone https://github.com/nareshbhatia/react-starter.git
+cd react-starter
+npm ci
+npm run dev
 ```
 
-Congratulations! Your machine is now certified to build React apps!
+Point your browser to http://localhost:3000 to make sure that the app runs.
+
+Congratulations! Your machine is now ready to build React apps!
 
 ## Install an IDE
 
@@ -139,11 +161,13 @@ You may now install an IDE like
 [Visual Studio Code](https://code.visualstudio.com/) (free) or
 [WebStorm](https://www.jetbrains.com/webstorm/) (paid).
 
-Here are some useful, Visual Studio Code extensions:
+Here are some useful Visual Studio Code extensions:
 
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap)
-- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
