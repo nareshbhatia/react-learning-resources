@@ -9,6 +9,7 @@
     "copyfiles",
     "datasources",
     "deepmerge",
+    "direnv",
     "dword",
     "isbot",
     "lucide",

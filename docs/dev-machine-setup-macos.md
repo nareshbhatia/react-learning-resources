@@ -20,8 +20,9 @@ See latest install docs [here](https://brew.sh/).
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git wget
-brew install tree # optional package for directory listing
+brew install git
+# install other useful packages
+brew install git-lfs jq direnv wget tree
 ```
 
 ### Install Z Shell
@@ -79,22 +80,22 @@ Now install the latest LTS version of Node.js
 ```bash
 nvm install --lts
 source "$HOME/.zshrc"
-node -v    # prints v20.16.0 as of this writing
+node -v    # prints v22.16.0 as of this writing
 ```
 
 If you get the error `nvm: command not found`, then follow the instructions
 under
 [Troubleshooting on macOS](https://github.com/nvm-sh/nvm#troubleshooting-on-macos).
 
-### Optional: Install Yarn
+### Install pnpm
 
-While Node comes with `npm` as its default package manager, if your projects use
-[Yarn](https://classic.yarnpkg.com/en/) instead, you can install Yarn using the
-commands below:
+While Node comes with `npm` as its default package manager, I like to use
+[pnpm](https://pnpm.io/) because it is fast and disk space efficient. Install
+pnpm using the commands below:
 
 ```bash
-brew install yarn
-yarn -v    # should print a version number like v1.22.22
+brew install pnpm
+pnpm -v    # should print a version number like 9.14.2
 ```
 
 ### Verify ~/.zshrc
@@ -144,11 +145,15 @@ wherever you keep projects and verify that you can build and run the app. I
 recommend keeping all your projects under ~/projects.
 
 ```bash
+# create a projects directory under your home directory
+cd
+mkdir projects
 cd ~/projects
 git clone https://github.com/nareshbhatia/react-starter.git
 cd react-starter
-npm ci
-npm run dev
+nvm use
+pnpm i
+pnpm dev
 ```
 
 Point your browser to http://localhost:3000 to make sure that the app runs.
